@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8E-l3-OB2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timed-->
+        <scene sceneID="bQE-Fl-hx5">
+            <objects>
+                <viewController id="a8E-l3-OB2" customClass="TimedPlayerViewController" customModule="TestStoryboards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GKF-tC-A0l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPv-gH-RvQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="6gK-SU-Be3"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="H1a-d0-Vcp" kind="embed" identifier="Multiplayer" id="kGk-nk-axX"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lD-el-Aac">
+                                <rect key="frame" x="0.0" y="177" width="414" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="b46-Pd-u3d"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Qbf-Eg-eQk" kind="embed" identifier="TimeView" id="p99-d1-2Mp"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="552-n5-3dT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="552-n5-3dT" firstAttribute="trailing" secondItem="1lD-el-Aac" secondAttribute="trailing" id="3bB-rq-NDg"/>
+                            <constraint firstItem="1lD-el-Aac" firstAttribute="top" secondItem="pPv-gH-RvQ" secondAttribute="bottom" constant="53" id="Nb6-hw-ODn"/>
+                            <constraint firstItem="1lD-el-Aac" firstAttribute="leading" secondItem="552-n5-3dT" secondAttribute="leading" id="SwU-UO-EJo"/>
+                            <constraint firstItem="552-n5-3dT" firstAttribute="trailing" secondItem="pPv-gH-RvQ" secondAttribute="trailing" id="iHU-yp-6e0"/>
+                            <constraint firstItem="pPv-gH-RvQ" firstAttribute="leading" secondItem="552-n5-3dT" secondAttribute="leading" id="lFp-Ce-b6t"/>
+                            <constraint firstItem="pPv-gH-RvQ" firstAttribute="top" secondItem="552-n5-3dT" secondAttribute="top" id="tt6-eT-IQk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timed" id="GpY-Lo-PY0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKO-bj-57d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="-80"/>
+        </scene>
+        <!--MultiplayerScore-->
+        <scene sceneID="UwJ-dv-c57">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Multiplayer" storyboardName="MultiplayerScore" id="H1a-d0-Vcp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1JW-VJ-4GY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-455"/>
+        </scene>
+        <!--TimeView-->
+        <scene sceneID="dlx-Hf-uye">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TimeView" storyboardName="TimeView" id="Qbf-Eg-eQk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmt-GC-xLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="-470"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

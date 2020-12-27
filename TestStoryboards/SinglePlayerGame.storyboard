@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oqn-ED-b1V">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player1-->
+        <scene sceneID="kRM-fg-mpV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Player1" id="rQZ-kz-lxQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dbu-iF-1g9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="-360"/>
+        </scene>
+        <!--SinglePlayer-->
+        <scene sceneID="uF2-ZC-tA0">
+            <objects>
+                <viewController id="Oqn-ED-b1V" customClass="SinglePlayerViewController" customModule="TestStoryboards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Lx-Na-ind">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5t-Th-W0E">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="MBO-LI-JKq"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="rQZ-kz-lxQ" kind="embed" identifier="Player1" id="YZb-es-XuJ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wSt-b3-hqS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l5t-Th-W0E" firstAttribute="top" secondItem="wSt-b3-hqS" secondAttribute="top" id="1X1-xV-Icf"/>
+                            <constraint firstItem="l5t-Th-W0E" firstAttribute="leading" secondItem="wSt-b3-hqS" secondAttribute="leading" id="8A2-vq-1e3"/>
+                            <constraint firstItem="wSt-b3-hqS" firstAttribute="trailing" secondItem="l5t-Th-W0E" secondAttribute="trailing" id="iS8-Hj-dua"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SinglePlayer" id="wcj-Zz-8FG"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fL4-ng-InH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="-36.160714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

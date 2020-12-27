@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MrD-Rn-3y5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MultiPlayerGame-->
+        <scene sceneID="R49-76-7VS">
+            <objects>
+                <viewController id="MrD-Rn-3y5" userLabel="MultiPlayerGame" customClass="MultiPlayerViewController" customModule="TestStoryboards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UHy-C7-5AR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUI-70-h4V">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Gkb-Xg-atO"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="uZi-W4-XD0" kind="embed" identifier="" id="lVG-lp-SlC"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cuE-5v-jHx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cuE-5v-jHx" firstAttribute="trailing" secondItem="MUI-70-h4V" secondAttribute="trailing" id="IJq-7u-uUt"/>
+                            <constraint firstItem="MUI-70-h4V" firstAttribute="top" secondItem="cuE-5v-jHx" secondAttribute="top" id="RCc-WR-Viw"/>
+                            <constraint firstItem="MUI-70-h4V" firstAttribute="leading" secondItem="cuE-5v-jHx" secondAttribute="leading" id="VUF-Ea-8G4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MultiPlayer" id="uUz-fR-9tX"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="poB-kq-E4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402.89855072463769" y="-93.080357142857139"/>
+        </scene>
+        <!--MultiplayerScore-->
+        <scene sceneID="uGb-uQ-uAE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MultiplayerScore" id="uZi-W4-XD0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pId-mB-1cO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
